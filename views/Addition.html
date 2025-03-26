@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css">
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container" id="myParagraph">        
+        <form id="registrationForm">
+            <h2 id="h2">Register Agent</h2>
+            <div class="mb-3">
+                <label>Name</label>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="firstName" class="form-control" placeholder="First" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="lastName" class="form-control" placeholder="Last" required>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label>Phone</label>
+                <input type="tel" id="phone" class="form-control" placeholder="" required>
+            </div>
+           
+            <div class="col">
+                <select id="state" class="form-control">
+                    <option value="">Branch</option>
+                    <option value="Maganjo">Maganjo</option>
+                    <option value="Matugga">Mattuga</option>
+                </select>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div> 
+            
+        </form>
+    </div>     
+    <button id="hideButton">Add Sales Agent</button> 
+    <br>
+    <br>
+    
+    <form id="produceForm">
+        <h2 id="h">Register Produce</h2>
+        <div class="mb-3">
+        <label for="produceName">Produce Name:</label>
+        <input type="text" id="produceName" name="produceName" required>
+        </div>
+        <div class="mb-3">
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+        </div>
+        <div class="mb-3">
+        <label for="quantity">Quantity (kg):</label>
+        <input type="number" id="quantity" name="quantity" required>
+        </div>
+        <div class="mb-3">
+        <label for="price">Price per kg:</label>
+        <input type="number" id="price" name="price" required>
+        </div>
+        <button type="submit">Register Produce</button>
+    </form>
+    
+        
+    
+    <script src="/css/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"> </script> 
+    <script src="/js/script.js"></script>
+</body>
+</html>

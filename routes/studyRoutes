@@ -1,0 +1,63 @@
+const express = require("express");
+const router = express.Router();
+const path = require("path");
+
+
+
+router.get('/', (req, res) => {
+    res.send('Homepage! Hello World.');
+});
+
+router.get('/about', (req, res) => {
+    res.send('About backend ! Nice.');
+});
+
+//POST
+router.post('/about', (req, res) => {
+    res.send('Go to post method In Backend.');
+});
+
+//update
+router.put('/user', (req, res) => {
+    res.send('update Backend.');
+});
+
+//Delete
+router.put('/user', (req, res) => {
+    res.send('Deleted Backend.'); // It will delete the user and diplays no items.
+});
+
+
+//path parameters
+router.get("/pathparams/name", (req, res) => {
+    res.send("My path param is" + req.params.name);
+});
+
+router.get("/Students/name", (req, res) => {
+    res.send("My path param is" + req.params.name);
+});
+
+
+//Query strings 
+router.get("/dogs", (req, res) => {
+    res.send(
+        "my query string are: " + req.query.bread + " and " + req.query.size
+    );
+
+});
+
+router.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/form.html"));
+});
+
+router.get('/forms', (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/Addition.html"));
+});
+
+router.post('/quotes', (req, res) => {
+    console.log(req.body)
+
+});
+
+
+module.exports = router;
